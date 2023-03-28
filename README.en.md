@@ -2,34 +2,33 @@
 <img src="assets/cabrita.png" alt="Cabrita" style="width: 20%; min-width: 300px; display: block; margin: auto;">
 </p>
 
-# Cabrita: Uma instrução finetuned em português para LLaMA
+# Cabrita: A portuguese finetuned instruction LLaMA
 
-Este repositório tem como objetivo compartilhar todos os passos e recursos que usamos para realizar finetune na nossa versão do LLaMA.
+This repository is intended to share all the steps and resources that we used to finetune our version of LLaMA.
 
-Este modelo foi projetado apenas para uso em pesquisa, ou seja, não pode ser usado para fins comerciais ou de entretenimento.
+This model is designed for research use only, i.e., cannot be used for commercial purposes or entertainment.
 
 
-## Referências
+## References
 
-> Se eu vi mais longe foi por estar de pé sobre ombros de gigantes.
+> If I have seen further it is by standing on the sholders [sic] of Giants.
 > -- <cite>Isaac Newton</cite>
 
-Começamos esta seção com essa citação porque tudo o que fizemos foi possível apenas devido à forte comunidade e trabalhos que outras pessoas e grupos fizeram. Para o nosso trabalho, confiamos principalmente nos trabalhos desenvolvidos por: [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/), [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca), [Alpaca Lora](https://github.com/tloen/alpaca-lora), [ChatGPT](https://openai.com/blog/chatgpt) e [Hugging Face](https://huggingface.co/). Então, obrigado a todos pelo excelente trabalho e por abrir isso para o mundo!
+We started this section with this citation because everything we did was only possible due to the strong community and works that other people and groups did. For our work, we rely mainly in the works developed by: [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/), [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca), [Alpaca Lora](https://github.com/tloen/alpaca-lora), [ChatGPT](https://openai.com/blog/chatgpt) and [Hugging Face](https://huggingface.co/). So, thank you all for the great work and open this to the world!
 
 
-## Dados
+## Data
 
-Traduzimos o [alpaca_data.json](https://github.com/tatsu-lab/stanford_alpaca/blob/main/alpaca_data.json) para português usando o ChatGPT. Mesmo que essa tradução não tenha sido a melhor, o trade-off entre custos e resultados foi aceitável. Pagamos cerca de US$ 8,00 para traduzir o conjunto de dados completo para o português.
-
-Se você quiser saber mais sobre como o conjunto de dados foi construído, vá para: [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca).
+We translated the [alpaca_data.json](https://github.com/tatsu-lab/stanford_alpaca/blob/main/alpaca_data.json) to portuguese using ChatGPT. Even this translation was not the best, the tradeoff between costs and results were. We paid around US$ 8.00 to translate the full dataset to portuguese.
+If you want to know more about how the dataset was built go to: [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca).
 
 
 ## Finetuning
 
-Para realizar o finetuned do modelo LLaMA, usamos o código disponível no [Alpaca Lora](https://github.com/tloen/alpaca-lora), que fornece código para finetunar o modelo LLaMA usando PEFT da Hugging Face. Com isso, pudemos executar nosso passo de finetuning usando 1 A100 no Colab em cima do LLaMA-7B. Treinamos por 1 hora e achamos os resultados incríveis com apenas esse tempo. O notebook que usamos está disponível [aqui](notebooks/train_lora.ipynb)..
+To finetuned the LLaMA model we used the code available on [Alpaca Lora](https://github.com/tloen/alpaca-lora), which provides code to finetune the LLaMA model using PEFT from Hugging Face. With this, we could run our finetuning step using 1 A100 at Colab on top of LLaMA-7B. We trained during 1 hour and we found the results pretty incredible with just that much time. The notebook we used is avaible [here](notebooks/train_lora.ipynb).
 
 
-## Exemplo de resultados
+## Example outputs
 
 Stanford Alpaca:
 ```
@@ -75,14 +74,14 @@ Resposta:
 
 You can test it using the eval notebook [here](notebooks/cabrita-lora.ipynb).
 
-## Próximos passos
+## Next steps
 
-- Criar um conjunto de dados em português melhor
-- Avaliar a toxicidade
-- Finetune de modelos grandes
+- Create a better portuguese dataset
+- Evaluate the toxicity
+- Finetune large models
 
 
-## Autores
+## Authors
 
 - [piEsposito](https://github.com/piEsposito)
 - [pedrogengo](https://github.com/pedrogengo)
